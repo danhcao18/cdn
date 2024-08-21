@@ -1,0 +1,1 @@
+let observerImg=new IntersectionObserver((e,r)=>{e.forEach(e=>{e.isIntersecting&&(e.target.src=e.target.dataset.src,observerImg.unobserve(e.target))})},{threshold:.8});document.querySelectorAll("img[data-src]").forEach(e=>{observerImg.observe(e)});
